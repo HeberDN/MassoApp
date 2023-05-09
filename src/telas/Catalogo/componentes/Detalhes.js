@@ -1,26 +1,21 @@
 import React from "react";
-import { View, Image, StyleSheet} from "react-native";
+import { View, Image, StyleSheet, TouchableOpacity} from "react-native";
 
 import Texto from "../../../componentes/Texto";
-import logo from '../../../../assets/logo.png';
 
-export default function Detalhes (){
+export default function Detalhes ({nome, nomeMassagem, logoMassagem, descricao, preco, botaoAgendar}){
     return<>
-        <Texto style={estilos.nome}>Catálogo</Texto>
+        <Texto style={estilos.nome}>{nome}</Texto>
         <View style={estilos.massagem}>
-            <Image source={logo} style={estilos.imagemMassagem}/>
-            <Texto style={estilos.nomeMassagem}>Massagem Relaxante</Texto>
+            <Image source={logoMassagem} style={estilos.imagemMassagem}/>
+            <Texto style={estilos.nomeMassagem}>{nomeMassagem}</Texto>
         </View>
-        <Texto style={estilos.descricao}>Uma massagem relaxante é uma técnica de 
-                massagem que tem como objetivo principal 
-                proporcionar relaxamento físico e mental 
-                ao cliente.
-                Essa técnica é realizada com movimentos lentos, 
-                suaves e rítmicos, aplicados em todo o corpo do 
-                cliente, utilizando óleos ou cremes para
-                facilitar o deslizamento das mãos do
-                terapeuta</Texto>
-        <Texto style={estilos.preco}>R$ 80,00</Texto>
+        <Texto style={estilos.descricao}>{descricao}</Texto>
+        <Texto style={estilos.preco}>{preco}</Texto>
+
+        <TouchableOpacity style = {estilos.botao}>
+        <Texto style={estilos.textoBotao}>{botaoAgendar}</Texto>
+        </TouchableOpacity> 
     </>
 }
 
@@ -55,5 +50,18 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 42,
         marginTop: 8,
+    },
+    botao: {
+        marginTop : 16,
+        backgroundColor: "#4169E1",
+        paddingVertical: 16,
+        borderRadius: 6,
+    },
+    textoBotao: {
+        textAlign: "center",
+        color: "#fff",
+        fontSize: 16,
+        lineHeight: 26,
+        fontWeight: "bold",
     },
 });

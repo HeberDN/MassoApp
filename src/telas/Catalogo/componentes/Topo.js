@@ -6,10 +6,10 @@ import topo from '../../../../assets/topo.png';
 
 const width = Dimensions.get('screen').width;
 
-export default function Topo(){
+export default function Topo({ titulo }){
     return<>
         <Image source={topo} style={estilos.topo}/>
-        <Texto style={estilos.titulo}>Serviços</Texto>
+        <Texto style={estilos.titulo}>{titulo}</Texto>
     </>
     
 }
@@ -26,7 +26,7 @@ const estilos = StyleSheet.create({
         fontSize: 26,
         lineHeight: 26,
         color: "#F8F8FF",
-        fontFamily: "MontserratBold",
+        //fontFamily: "MontserratBold",
         fontWeight: "bold",
         padding: 16,
     },
