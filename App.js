@@ -13,11 +13,11 @@ export default function App() {
   });
 
   if(!fonteCarregada){
-    return <AppLoading/>
+    return null;
   }
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style ={{flex:1}}>
       <StatusBar />
       <Catalogo {...mock} />
     </SafeAreaView>
