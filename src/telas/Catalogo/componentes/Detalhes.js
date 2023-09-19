@@ -45,7 +45,7 @@ const estilos = StyleSheet.create({
         lineHeight: 26,
     },
     preco:{
-        color: "#4169E1",
+        color: "#00BFFF",
         fontWeight: "bold",
         fontSize: 26,
         lineHeight: 42,
@@ -53,7 +53,7 @@ const estilos = StyleSheet.create({
     },
     botao: {
         marginTop : 16,
-        backgroundColor: "#4169E1",
+        backgroundColor: "#00BFFF",
         paddingVertical: 16,
         borderRadius: 6,
     },

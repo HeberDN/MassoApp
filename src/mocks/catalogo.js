@@ -18,27 +18,27 @@ const catalogo = {
         botaoAgendar: "Agendar",
     },
     itens: {
-        titulo: "Massagens",
+        titulo: "Escolha sua massagem",
         lista: [
             {
-                nome: "Massagem Modeladora Corporal",
+                nome: "Terapêuticas",
+                massagens: ["Auricoterapia", "Quick massagem", "Flexologia"],
                 imagem: massagemModeladoraCorporal,
             },
             {
-                nome: "Massagem Modeladora Facial",
+                nome: "Relaxantes",
+                massagens: ["Massagem sueca", "Massagem tailandesa", "Shiatsu"],
                 imagem: massagemModeladoraFacial,
             },
             {
-                nome: "Massagem Relaxante",
+                nome: "Estéticas",
+                massagens:["Drenagem linfática", "Massagem modeladora", "Peeling corporal"],
                 imagem: massagemRelaxante,
             },
             {
-                nome: "Massagem Terapêutica",
+                nome: "Alternativas",
+                massagens: ["Acupuntura", "Reiki", "Reflexologia"],
                 imagem: massagemTerapeutica,
-            },
-            {
-                nome: "Mocha",
-                imagem: mocha,
             },
         ]
     }
