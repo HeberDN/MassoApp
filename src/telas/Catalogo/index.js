@@ -7,7 +7,7 @@ import Topo from "./componentes/Topo";
 import Detalhes from "./componentes/Detalhes";
 import Item from "./componentes/Item";
 
-export default function Catalogo({topo, detalhes, itens}){
+export default function Catalogo({topo, detalhesEmpresa, itens}){
     const [categoriaSelecionada, setCategoriaSelecionada] = useState(null);
     const [isListaExpandida, setIsListaExpandida] = useState(false);
 
@@ -36,8 +36,7 @@ export default function Catalogo({topo, detalhes, itens}){
                         <>
                         <Topo {...topo}/>
                         <View style={estilos.catalogo}>
-                            <Detalhes {...detalhes}/>
-                            <Texto style={estilos.titulo}>Escolha sua massagem - Index</Texto>
+                            <Detalhes {...detalhesEmpresa}/>
                             <Texto style={estilos.titulo}>{itens.titulo}</Texto>
                         </View>
                         </>
@@ -55,12 +54,12 @@ export default function Catalogo({topo, detalhes, itens}){
                     {itens.lista.map((massagem) => {
                       if (massagem.nome === categoriaSelecionada) {
                         return (
-                          <View key={massagem.nome}>
+                          <View key={massagem.massagens}>
                             <Image source={massagem.imagem} />
                             <Texto>{massagem.descricao}</Texto>
                             <Texto>Preço: {massagem.preco}</Texto>
                             <TouchableOpacity>
-                              <Texto>{detalhes.botaoAgendar}</Texto>
+                              <Texto>Detalhes massagem</Texto>
                             </TouchableOpacity>
                           </View>
                         );

@@ -3,16 +3,15 @@ import { View, Image, StyleSheet, TouchableOpacity} from "react-native";
 
 import Texto from "../../../componentes/Texto";
 
-export default function Detalhes ({nome, nomeMassagem, logoMassagem, descricao, preco, botaoAgendar}){
+export default function Detalhes ({nomeEmpresa, imagemMassagem, logoEmpresa, descricaoEmpresa, botaoAgendar}){
     return<>
-        <Texto style={estilos.nome}>{nome}</Texto>
+        <Texto style={estilos.nome}>{nomeEmpresa}</Texto>
         <View style={estilos.massagem}>
-            <Image source={logoMassagem} style={estilos.imagemMassagem}/>
-            <Texto style={estilos.nomeMassagem}>{nomeMassagem}</Texto>
+            <Image source={logoEmpresa} style={estilos.imagemMassagem}/>
+            <Texto style={estilos.nomeEmpresa}>{nomeEmpresa}</Texto>
         </View>
-        <Texto style={estilos.descricao}>{descricao}</Texto>
-        <Texto style={estilos.preco}>{preco}</Texto>
-
+        <Texto style={estilos.descricao}>{descricaoEmpresa}</Texto>
+        
         <TouchableOpacity style = {estilos.botao}>
         <Texto style={estilos.textoBotao}>{botaoAgendar}</Texto>
         </TouchableOpacity> 

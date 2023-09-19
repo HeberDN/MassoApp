@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.png";
+import logo from '../../assets/logo.png';
 import massagemModeladoraCorporal from "../../assets/massagens/MassagemModeladoraCorporal.png";
 import massagemModeladoraFacial from "../../assets/massagens/MassagemModeladoraFacial.png";
 import massagemRelaxante from "../../assets/massagens/MassagemRelaxante.png";
@@ -9,20 +9,19 @@ const catalogo = {
     topo: {
         titulo: "Serviços",
     },
-    detalhes: {
-        nome: "Catálogo",
-        logoMassagem: logo,
-        nomeMassagem: "Toque Terapêutico",
-        descricao: "Especializado em técnica de massagem que tem como objetivo principal proporcionar relaxamento físico e mental ao cliente.",
-        preco: "R$ 80,00",
+    detalhesEmpresa: {
+        nomeEmpresa: "Toque Terapêutico",
+        logoEmpresa: logo,
+        descricaoEmpresa: "Especializado em técnica de massagem que tem como objetivo principal proporcionar relaxamento físico e mental ao cliente.",
         botaoAgendar: "Agendar",
     },
     itens: {
-        titulo: "Escolha sua massagem",
+        titulo: "Massagens",
         lista: [
             {
                 nome: "Terapêuticas",
                 massagens: ["Auricoterapia", "Quick massagem", "Flexologia"],
+                preco: "R$ 80,00",
                 imagem: massagemModeladoraCorporal,
             },
             {
